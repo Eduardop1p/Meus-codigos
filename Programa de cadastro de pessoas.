@@ -1,0 +1,40 @@
+#Programa simples de cadastro ultilizando somente if e else
+
+
+from time import sleep
+print('-=-' * 20)
+print('Programa de Cadastro.')
+print('-=-' * 20)
+
+email = input('Seu email: ').lower().strip()
+numweo = int(input('Seu número de telefone ou celular (somete números por favor): '))
+nome = input('Seu nome ou apelido: ').strip().title()
+senha = input('Crie uma senha {} para sua conta: '.format(nome))
+if senha >= str(6):
+    senha2 = input('{} digete sua senha novalmente para confimarmos: '.format(nome))
+    if senha2 == senha:
+        ede = str(input('Seu Estado: ')).title().strip()
+        ede2 =  str(input('Sua cidade: ')).title().strip()
+        ede3 = str(input('Seu bairro: ')).title().strip()
+        ede4 = str(input('Nome de sua Rua: ')).title().strip()
+        ede6 = str(input('Complemento: '))
+        ede5 = int(input('Número da sua residência: '))
+        print('PROCESSANDO SEUS DADOS...')
+        sleep(2)
+        print('Seu cadastro está completo, Espere pelo seu email de verificação.')
+else:
+    print('Sua senha deve ter mais que 6 caracterís.')
+    s = input('Crie uma senha {} para sua conta: '.format(nome))
+    s2 = input('{} digete sua senha novalmente para confimarmos: '.format(nome))
+    if s == s2:
+        ede = str(input('Seu Estado: ')).title().strip()
+        ede2 = str(input('Sua cidade: ')).title().strip()
+        ede3 = str(input('Seu bairro: ')).title().strip()
+        ede4 = str(input('Nome de sua Rua: ')).title().strip()
+        ede6 = str(input('Complemento: '))
+        ede5 = int(input('Número da sua residência: '))
+        print('PROCESSANDO SEUS DADOS...')
+        sleep(2)
+        print('Seu cadastro está completo {}, Espere pelo seu email de verificação de conta.'.format(nome))
+    else:
+        print('Recarregue a página por favor.')
