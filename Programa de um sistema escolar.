@@ -1,0 +1,27 @@
+#Programa que vai caulcular a média do aluno e dizer se ele passou ou ficou de recuperação ou reprovado.
+
+print('_' * 85)
+print('Programa que vai dizer se o aluno foi reprovado ou passou ou ficou de recuperação')
+print('_' * 85)
+
+nome1 = str(input('Seu usúario de login professor: '))
+senha = str(input('Senha de acesso ao sistema {}: '.format(nome1)))
+if senha == 'aluno.nota10':
+    print('login efertuado com sucesso.')
+    nome2 = str(input('Nome do aluno: ')).strip().title()
+    print('Serão 6 notas ao todo.')
+    nota1 = float(input('Nota 1: '))
+    nota2 = float(input('Nota 2: '))
+    nota3 = float(input('Nota 3: '))
+    nota4 = float(input('Nota 4: '))
+    nota5 = float(input('Nota 5: '))
+    nota6 = float(input('Nota 6: '))
+    resul = (nota1 + nota2 + nota3 + nota4 + nota5 + nota6) / 6
+    if resul >= 6.0:
+        print('Parabéns {}, Voçê passou direto a sua média é de {:.2f}, Aproveite suas férias.'.format(nome2,resul))
+    elif resul >= 5 <= 5.99:
+        print('{}, a sua média é de {:.2f}, Voçê ficou de recuperação.\nCompareça na escola todas as segundas entre 07/03 a 31/03 de março.'.format(nome2,resul))
+    elif resul <= 4.9:
+        print('Sinto muito {}, Voçê ficou reprovado, sua média é de {:.2f}.'.format(nome2,resul))
+else:
+    print('A senha está incorreta {}, por favor feche o programa e abra o novalmente.'.format(nome1))
