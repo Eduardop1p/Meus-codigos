@@ -1,0 +1,23 @@
+#Reajuste salarial.
+
+salario = float(input('Digete o salário do colaborador R$'))
+if salario <= 280.00:
+    aumento1 = salario + (salario*20/100)
+    aut1 = salario*20/100
+    print('O seu salário antes do reajuste é de R${:.2f} Reais, Com um porcentual de 20% seu salário passa a ter\n'
+          'um almento de R${:.2f} Reais, Seu novo salário após o aumento é de R${:.2f} Reais.'.format(salario,aut1,aumento1))
+elif salario >= 280 and salario <= 700:
+    aumento2 = salario + (salario*15/100)
+    aut2 = salario*15/100
+    print('O seu salário antes do reajuste é de R${:.2f} Reais, Com um porcentual de 15% seu salário passa a ter\n'
+          'um almento de R${:.2f} Reais, Seu novo salário após o aumento é de R${:.2f} Reais.'.format(salario,aut2,aumento2))
+elif salario >= 700 and salario <= 1500:
+    aumento3 = salario + (salario*10/100)
+    aut3 = salario*10/100
+    print('O seu salário antes do reajuste é de R${:.2f} Reais, Com um porcentual de 10% seu salário passa a ter\n'
+          'um almento de R${:.2f} Reais, Seu novo salário após o aumento é de R${:.2f} Reais.'.format(salario,aut3,aumento3))
+elif salario >= 1500:
+    aumento4 = salario + (salario*5/100)
+    aut4 = salario*5/100
+    print('O seu salário antes do reajuste é de R${:.2f} Reais, com um porcentual de 5% seu salário passa a ter\n'
+          'um almento de R${:.2f} Reais, Seu novo salário após o aumento  é de R${:.2f} Reais.'.format(salario,aut4,aumento4))
