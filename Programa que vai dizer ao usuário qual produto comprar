@@ -1,0 +1,20 @@
+#Programa que vai me dizer entre os 3 produtos qual é mais barato
+
+#Entrada de dados do usúario.
+
+
+pro1 = float(input('O preço do 1° Produto R$'))
+pro2 = float(input('O preço  do 2° Produto R$'))
+pro3 = float(input('O preço do 3° Produto R$'))
+#Logica.
+if pro1 < pro2:
+    m1 = pro1
+    print('O produto de preço R${:.2f} Reais, é mais barato.'.format(m1))
+elif pro2 < pro3:
+    m2 = pro2
+    print('O produto de preço R${:.2f} Reais, é mais barato.'.format(m2))
+elif pro3 < pro1:
+    m3 = pro3
+    print('O produto de preço R${:.2f} Reais, é mais barato.'.format(m3))
+else:
+    print('Todos os produtos tem preços IGUAIS.')
