@@ -1,0 +1,19 @@
+#Programa que vai calcular seu IMC
+
+print('_' * 60)
+print('As  suas informações necessárias para o cálculo.')
+altura = float(input('Sua altura? (m) '))
+peso = float(input('Seu peso? (kg) '))
+idade = int(input('Sua idade? '))
+calculo = altura * altura
+calculo2 = peso / calculo
+if calculo2 < 18.5:
+    print('IMC de {:.2f}, está ABAIXO DO PESO para uma pessoa de {} anos, seu peso é {:.2f}kg.'.format(calculo2,idade,peso))
+elif calculo2 <= 18.5 and calculo2 < 25:
+    print('IMC de {:.2f}, dentro do seu PESO IDEAL para uma pessoa de {} anos, seu peso é {:.2f}kg.'.format(calculo2,idade,peso))
+elif calculo2 <= 25 and calculo2 < 30:
+    print('IMC de {:.2f}, está com SOBREPESO para uma pessoa de {} anos, seu peso é {:.2f}kg.'.format(calculo2,idade,peso))
+elif calculo2 <= 30 and calculo2 <= 40:
+    print('IMC de {:.2f}, está com OBESIDADE para uma pessoa de {} anos, seu peso é {:.2f}kg.'.format(calculo2,idade,peso))
+else:
+    print('IMC de {:.2f}, está com OBESIDADE MÓBITA para uma pessoa de {} anos, seu peso é {:.2f}kg.'.format(calculo2,idade,peso))
