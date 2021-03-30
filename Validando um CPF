@@ -1,3 +1,5 @@
+l_f = []
+
 while True:
     f = input('Digite apenas os números do seu CPF: ')
     if f.isnumeric():
