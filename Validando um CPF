@@ -1,0 +1,54 @@
+while True:
+    f = input('Digite apenas os números do seu CPF: ')
+    if f.isnumeric():
+        if len(f) != 11:
+            print('O seu CPF tem que ter os 11 digitos completos.')
+            continue
+        elif len(f) == 11:
+            for f3 in f:
+                f3 = int(f3)
+                l_f.append(f3)
+                if len(l_f) == 9:
+                    rs1 = l_f[0] * 10
+                    rs2 = l_f[1] * 9
+                    rs3 = l_f[2] * 8
+                    rs4 = l_f[3] * 7
+                    rs5 = l_f[4] * 6
+                    rs6 = l_f[5] * 5
+                    rs7 = l_f[6] * 4
+                    rs8 = l_f[7] * 3
+                    rs9 = l_f[8] * 2
+                    s1 = rs1 + rs2 + rs3 + rs4 + rs5 + rs6 + rs7 + rs8 + rs9
+                elif len(l_f) == 10:
+                    sr1 = l_f[0] * 11
+                    sr2 = l_f[1] * 10
+                    sr3 = l_f[2] * 9
+                    sr4 = l_f[3] * 8
+                    sr5 = l_f[4] * 7
+                    sr6 = l_f[5] * 6
+                    sr7 = l_f[6] * 5
+                    sr8 = l_f[7] * 4
+                    sr9 = l_f[8] * 3
+                    sr10 = l_f[9] * 2
+                    s2 = sr1 + sr2 + sr3 + sr4 + sr5 + sr6 + sr7 + sr8 + sr9 + sr10
+                    d10 = s1 % 11
+                    d11 = s2 % 11
+            if d10 < 2:
+                d10 = 0
+            elif d10 >= 2:
+                d10 = 11 - d10
+            if d11 < 2:
+                d11 = 0
+            elif d11 >= 2:
+                d11 = 11 - d11
+            if d10 == l_f[9] and d11 == l_f[10]:
+                print('\033[1;32mSeu CPF é VALIDO.\033[m')
+                break
+            else:
+                print('\033[1;31mSeu CPF NÃO é VALIDO.\033[m')
+                break
+    else:
+        print('Por favor digite apenas números no campo CPF.')
+        continue
+
+print('\n')
